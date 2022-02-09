@@ -1,10 +1,14 @@
 const scaleTones = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
+function randomizeNum(array){
+    let randNum = Math.floor(Math.random()* array.length);
+    return randNum
+}
 const generateScale = () =>{
     const possibleTonality = ['Major', 'Minor', 'Phrygian', 'Lydian', 'Locrian', 'Mixolydian', 'Dorian'];
-    function randomizeNum(){
-        let randNum = Math.floor(Math.random()* 7);
-        return randNum
-    }
-    return scaleTones[randomizeNum()] + " " + possibleTonality[randomizeNum()]
+    return scaleTones[randomizeNum(scaleTones)] + " " + possibleTonality[randomizeNum(possibleTonality)]
 }
 
+const generateChord = () =>{
+    const possibleChordType = []
+}
+console.log(generateScale())
