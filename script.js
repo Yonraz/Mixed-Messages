@@ -4,6 +4,7 @@ function randomizeNum(array){
     let randNum = Math.floor(Math.random()* array.length);
     return randNum;
 }
+
 const generateScale = () =>{
     const possibleTonality = ['Major', 'Minor', 'Phrygian', 'Lydian', 'Locrian', 'Mixolydian', 'Dorian'];
     return scaleTones[randomizeNum(scaleTones)] + " " + possibleTonality[randomizeNum(possibleTonality)];
@@ -16,5 +17,10 @@ const generateChord = () =>{
     return scaleTones[randomizeNum(scaleTones)] +  possibleTensions[randomizeNum(possibleTensions)]
     }
     return scaleTones[randomizeNum(scaleTones)] +  possibleChordType[randomizeNum(possibleChordType)]
+}
+
+const generateTimeSignature = () =>{
+    const signatureArray = ['4/4', '3/4', '5/4', '7/8']
+    return signatureArray[randomizeNum(signatureArray)]
 }
 
