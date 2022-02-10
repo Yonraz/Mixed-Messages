@@ -46,21 +46,14 @@ function generateTSMessage(timeSig) {
 
 function getFinalMessage(scaleFunc, chordFunc, TSFunc) {
     const possibleMessageArray = [scaleFunc, chordFunc, TSFunc];
-    return possibleMessageArray[getRandomNumber(possibleMessageArray)];
+    let finalMessage = possibleMessageArray[getRandomNumber(possibleMessageArray)];
+    return finalMessage;
 }
 
 let scaleMessage = generateScaleMessage(randScale);
 let chordMessage = generateChordMessage(randChord);
 let timeSigMessage = generateTSMessage(chosenTimeSign);
 
+let endResult = getFinalMessage(scaleMessage, chordMessage, timeSigMessage)
 
-console.log(getFinalMessage(scaleMessage, chordMessage, timeSigMessage))
-
-
-// const getMessage = (scale, chord, TS) => {
-    // const typeOfMessage = [scale, chord, TS];
-    // let subject = typeOfMessage[getRandomNumber(typeOfMessage)]
-    // if (subject === scale) {
-        // return 
-    // } 
-// }
+console.log(endResult)
