@@ -26,13 +26,8 @@ function generateChord() {
     return chosenScale +  chosenChordType;
 }
 
-function generateTimeSignature() {
-    return chosenTimeSign;
-}
-
 let randScale = generateScale();
 let randChord = generateChord();
-let randTimeSignature = generateTimeSignature();
 
 function generateScaleMessage(scale) {
     const message = [`Your song is in the scale of ${scale}.`, `You better use ${scale} for this one.`, `${scale} is your scale for today.`];
@@ -56,7 +51,7 @@ function getFinalMessage(scaleFunc, chordFunc, TSFunc) {
 
 let scaleMessage = generateScaleMessage(randScale);
 let chordMessage = generateChordMessage(randChord);
-let timeSigMessage = generateTSMessage(randTimeSignature);
+let timeSigMessage = generateTSMessage(chosenTimeSign);
 
 
 console.log(getFinalMessage(scaleMessage, chordMessage, timeSigMessage))
