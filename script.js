@@ -44,8 +44,13 @@ function generateTSMessage(timeSig) {
     return message[getRandomNumber(message)];
 }
 
+function modulate(randScale){
+    const message = [`Now go to the key of ${randScale}`, `Try moving up to ${randScale}`, `Mix it up with ${randScale}`]
+    return message[getRandomNumber(message)];
+}
+
 function getFinalMessage(scaleFunc, chordFunc, TSFunc) {
-    const possibleMessageArray = [scaleFunc, chordFunc, TSFunc];
+    let possibleMessageArray = [scaleFunc, chordFunc, TSFunc];
     let finalMessage = possibleMessageArray[getRandomNumber(possibleMessageArray)];
     return finalMessage;
 }
